@@ -1,4 +1,4 @@
-function braces(entries) {
+function brackets(entries) {
 
   const findMatchingBracket = (array) => {
     //returns an array of the first opening and its closing brackets, if there
@@ -72,4 +72,4 @@ function braces(entries) {
 
 const entries = ['([])()','(({)})','(){}[]'];
 
-braces(entries);
+brackets(entries);

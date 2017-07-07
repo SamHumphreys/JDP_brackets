@@ -1,1 +1,1 @@
-Run with -> node brackets
+Run in the terminal with command 'node brackets.js'
