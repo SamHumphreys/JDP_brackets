@@ -1,5 +1,10 @@
-function brackets(entries) {
+const getEntries = (inputs) => {
+  for (let i = 2; i < inputs.length; i ++) {
+    entries.push(inputs[i]);
+  };
+};
 
+function brackets(entries) {
   const findMatchingBracket = (array) => {
     //returns an array of the first opening and its closing brackets, if there
     // is no closing bracket return false
@@ -28,9 +33,7 @@ function brackets(entries) {
     return [0, closeIndexes[closeIndexes.length - 1]];
   };
 
-
   const isMirror = (array) => {
-
     //initial auto true and false situations:
     //  entry is empty return true
     if (array.length === 0) return true;
@@ -59,7 +62,6 @@ function brackets(entries) {
     return true;
   };
 
-
   //for each input, run the test and log 'YES' or 'NO'
   for (let i = 0; i < entries.length; i ++) {
     if (entries[i].length === 0) {
@@ -70,6 +72,9 @@ function brackets(entries) {
   };
 };
 
-const entries = ['([])()','(({)})','(){}[]'];
-
+let entries = [];
+getEntries(process.argv);
+if (entries.length === 0) {
+  entries = ['[](){}', '({})()', '({)}'];
+};
 brackets(entries);
