@@ -1,4 +1,5 @@
 Run in the terminal with command "node brackets.js pattern1 pattern2 pattern3 etc"
+
 For example: "node brackets.js '[](){}' '({})()' '({)}'"
 ...should return
 YES
